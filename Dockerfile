@@ -11,4 +11,4 @@ COPY . .
 # Build the app
 RUN npm run build
 # Run the app
-CMD ["npm", "start"]
+CMD ["sh", "-c", "PORT=$PORT npm start"]
