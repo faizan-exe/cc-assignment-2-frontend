@@ -1,43 +1,106 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Styles */
+.app-container {
   text-align: center;
+  font-family: Arial, sans-serif;
+  padding-top: 15vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-title {
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-title-container {
+  width: 100vw;
+  background: #FFFFFF;
+  position: fixed;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Chat Container */
+.chat-container {
+  width: 80vw;
+  margin: 0 auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  padding: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* background-color: #f9f9f9; */
 }
 
-.card {
-  padding: 2em;
+.chat-box {
 }
 
-.read-the-docs {
-  color: #888;
+/* Chat Messages */
+.chat-message {
+  margin-bottom: 10px;
 }
 
+.chat-user {
+  text-align: right;
+}
+
+.chat-bot {
+  text-align: left;
+}
+
+.chat-bubble {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.chat-user .chat-bubble {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.chat-bot .chat-bubble {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.chat-image {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Chat Form */
+.chat-form {
+  /* margin-top: 10px; */
+  position: fixed;
+  bottom: 10px;
+  width: 80vw;
+  display: flex;
+}
+
+.chat-input {
+  padding: 20px 10px;
+  width: calc(100% - 80px);
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 8px;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.chat-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.chat-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
